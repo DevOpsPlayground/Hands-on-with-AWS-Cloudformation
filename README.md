@@ -1,5 +1,6 @@
 # Hands On Infrastructure as Code (IaC) with AWS Cloud Formation
 
+Home |
 [AWS Console](https://devopsplayground.signin.aws.amazon.com/console) |
 [Anatomy](doc/anatomy.md) |
 [lab-001](doc/lab-001.md) |
@@ -21,7 +22,7 @@ The topics for this hands-on session will be on AWS Cloud Formation, Infrastruct
 - Lab-002 - Adding Bucket Policy to give public read access
 - Lab-003 -
 - Lab-004 - Launch EC2 Instance
-- Lab-005 - 
+- Lab-005 -
 - Lab-006 -
 
 
