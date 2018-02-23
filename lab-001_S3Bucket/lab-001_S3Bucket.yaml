@@ -1,0 +1,29 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: Create a new S3 Bucket, with a parameterise bucketname with output bucketname
+
+Metadata:
+  AWS::CloudFormation::Interface:
+    ParameterGroups:
+      - Label:
+          default: "Lab-001: S3 Bucket"
+        Parameters:
+          - pS3BucketName
+
+    ParameterLabels:
+      - pS3BucketName: "Bucket Name"
+
+Parameters:
+  pS3BucketName:
+    Description: Name of bucket, must be globally unique.
+    Type: String
+
+Resources:
+  usecaseBucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketName: !Ref pS3BucketName
+
+Outputs:
+  usecaseBucket:
+    Value: !Ref pS3BucketName
+    Description: Name of the Amazon S3 bucket for usecase - 001

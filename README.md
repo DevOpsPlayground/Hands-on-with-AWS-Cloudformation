@@ -28,15 +28,14 @@ What is cnf-init?
 
 # Labs
 
-- Lab-001 - Create a new S3 bucket.
-- Lab-002 - Create a Change set to modified a existing stack from lab-001
-Adding Bucket Policy to give public read access
-- Lab-003 -
-- Lab-004 - Launch EC2 Instance
+- Lab-001 - Create a CloudFormation Stack
+- Lab-002 - Using Change Sets
+- Lab-003 - Understanding Metadata and Conditions
+- Lab-004 - 
 - Lab-005 -
 - Lab-006 -
 
 
 ## Further Reading
 1. [AWS CloudFormation FAQs](https://aws.amazon.com/cloudformation/faqs/)
-1. [AWS CloudFormation Designer](https://console.aws.amazon.com/cloudformation/designer/home?region=us-east-1) - Using us-east-1 region
+1. [AWS CloudFormation Designer](https://console.aws.amazon.com/cloudformation/designer/home?region=us-east-1) - Using `us-east-1` region
