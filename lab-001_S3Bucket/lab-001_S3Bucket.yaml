@@ -1,6 +1,5 @@
 AWSTemplateFormatVersion: '2010-09-09'
 Description: Create a new S3 Bucket, with a parameterise bucketname with output bucketname
-
 Metadata:
   AWS::CloudFormation::Interface:
     ParameterGroups:
@@ -10,12 +9,16 @@ Metadata:
           - pS3BucketName
 
     ParameterLabels:
-      - pS3BucketName: "Bucket Name"
+      pS3BucketName:
+        default: "Bucket Name"
 
+        
 Parameters:
   pS3BucketName:
     Description: Name of bucket, must be globally unique.
     Type: String
+
+
 
 Resources:
   usecaseBucket:

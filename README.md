@@ -1,7 +1,7 @@
 # Hands On Infrastructure as Code (IaC) with AWS Cloud Formation
 
 Home |
-[AWS Console](https://devopsplayground.signin.aws.amazon.com/console) |
+[AWS Console](https://console.aws.amazon.com) |
 [Anatomy](doc/anatomy.md) |
 [lab-001](doc/lab-001.md) |
 [lab-002](doc/lab-002.md) |
@@ -31,11 +31,12 @@ What is cnf-init?
 - Lab-001 - Create a CloudFormation Stack
 - Lab-002 - Using Change Sets
 - Lab-003 - Understanding Metadata and Conditions
-- Lab-004 - 
-- Lab-005 -
-- Lab-006 -
+- Lab-004 - launch an EC2 instance
+
 
 
 ## Further Reading
 1. [AWS CloudFormation FAQs](https://aws.amazon.com/cloudformation/faqs/)
 1. [AWS CloudFormation Designer](https://console.aws.amazon.com/cloudformation/designer/home?region=us-east-1) - Using `us-east-1` region
+1. Udemy - [AWS CloudFormation Master Class](https://www.udemy.com/aws-cloudformation-master-class/learn/v4/overview)
+1. acloud.guru - [Advanced AWS CloudFormation](https://acloud.guru/learn/aws-advanced-cloudformation)

@@ -1,0 +1,67 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: Goal - Update S3 bucket add a policy document setting bucket to Public Read Access
+Metadata:
+  AWS::CloudFormation::Interface:
+    ParameterGroups:
+      - Label:
+          default: "Lab-001: S3 Bucket"
+        Parameters:
+          - pS3BucketName
+          - pEnableVersioning
+
+    ParameterLabels:
+      pS3BucketName:
+        default: "Bucket Name"
+      pEnableVersioning:
+        default: "Enable Versioning"
+
+
+Parameters:
+  pS3BucketName:
+    Description: Name of bucket, must be globally unique.
+    Type: String
+    Default: sample-use-case-002
+
+  pEnableVersioning:
+    Description: Enable versioning
+    Default: false
+    Type: String
+    AllowedValues: [true, false]
+
+Conditions:
+  EnableVersioning:
+    !Equals [true, !Ref pEnableVersioning]
+
+Resources:
+  SampleBucketPolicy:
+    Type: "AWS::S3::BucketPolicy"
+    Properties:
+      Bucket: !Ref pS3BucketName
+      PolicyDocument:
+        Statement:
+          - Sid: PublicReadForGetBucketObjects
+            Effect: "Allow"
+            Principal: "*"
+            Action: "s3:GetObject"
+            Resource: !Sub "arn:aws:s3:::${pS3BucketName}/*"
+
+  usecaseBucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketName: !Ref pS3BucketName
+      VersioningConfiguration:
+        Status: !If [ EnableVersioning, "Enabled", "Suspended" ]
+        # Using the Conditional to set a variable in a specific way.
+      AccessControl: BucketOwnerFullControl
+      Tags:
+        -
+          Key: "environmentname"
+          Value: "development"
+        -
+          Key: "costcenter"
+          Value: "0123456789"
+
+Outputs:
+  usecaseBucket:
+    Value: !Ref pS3BucketName
+    Description: Name of the Amazon S3 bucket for usecase - 002

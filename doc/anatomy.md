@@ -1,7 +1,7 @@
 # Cloud Formation Template Anatomy
 
 [Home](../README.md) |
-[AWS Console](https://devopsplayground.signin.aws.amazon.com/console) |
+[AWS Console](https://console.aws.amazon.com) |
 Anatomy |
 [lab-001](lab-001.md) |
 [lab-002](lab-002.md) |
