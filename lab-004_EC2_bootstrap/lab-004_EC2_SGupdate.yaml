@@ -1,0 +1,18 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: 'AWS CloudFormation lab-004 EC2  - Update SecurityGroup '
+Parameters:
+  MySecurityGroup:
+    Description: "Security groups that can be used to access the EC2 instances"
+    Type: "List<AWS::EC2::SecurityGroup::Id>"
+    ConstraintDescription: must be list of EC2 security group ids
+
+Resources:
+
+  HttpInboundRule:
+    Type: 'AWS::EC2::SecurityGroupIngress'
+    Properties:
+      GroupName: !GetAtt MySecurityGroup.GroupName
+      IpProtocol: tcp
+      FromPort: '80'
+      ToPort: '80'
+      SourceSecurityGroupName: !Ref MySecurityGroup

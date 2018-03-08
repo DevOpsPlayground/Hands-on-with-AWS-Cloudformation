@@ -12,7 +12,7 @@ Metadata:
       pS3BucketName:
         default: "Bucket Name"
 
-        
+
 Parameters:
   pS3BucketName:
     Description: Name of bucket, must be globally unique.
@@ -23,6 +23,7 @@ Parameters:
 Resources:
   usecaseBucket:
     Type: AWS::S3::Bucket
+    DeletionPolicy: Delete
     Properties:
       BucketName: !Ref pS3BucketName
 

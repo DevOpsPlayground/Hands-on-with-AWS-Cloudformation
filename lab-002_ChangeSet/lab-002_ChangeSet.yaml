@@ -4,7 +4,7 @@ Metadata:
   AWS::CloudFormation::Interface:
     ParameterGroups:
       - Label:
-          default: "Lab-001: S3 Bucket"
+          default: "Lab-002: S3 Bucket"
         Parameters:
           - pS3BucketName
           - pEnableVersioning
@@ -20,7 +20,7 @@ Parameters:
   pS3BucketName:
     Description: Name of bucket, must be globally unique.
     Type: String
-    Default: sample-use-case-002
+    Default: pg19.<YOUR NAME>
 
   pEnableVersioning:
     Description: Enable versioning
