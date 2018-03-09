@@ -1,0 +1,14 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: 'AWS CloudFormation lab-004 EC2  - Update SecurityGroup '
+Parameters:
+  MyWebSecurityGroup:
+    Description: "SG for HTTP and HTTPS"
+    Type: "AWS::EC2::SecurityGroup::Id"
+    ConstraintDescription: must be security group id
+
+Resources:
+  EC2Instance:
+    Type: AWS::EC2::Instance
+    Properties:
+      SecurityGroups:
+        - !Ref 'MyWebSecurityGroup'

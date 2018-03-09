@@ -1,21 +1,17 @@
 AWSTemplateFormatVersion: '2010-09-09'
 Description: 'AWS CloudFormation lab-004 EC2  - Update SecurityGroup '
-Parameters:
-  MyInstanceSecurityGroup:
-    Description: "Security groups that can be used to access the EC2 instances"
-    Type: "AWS::EC2::SecurityGroup::Id"
-    ConstraintDescription: must be list of EC2 security group ids
 
 Resources:
-  LocalSecurityGroup:
-    Type: AWS::EC2::SecurityGroup
+  EC2Instance:
+    Type: AWS::EC2::Instance
     Properties:
-      GroupDescription: Local Security Group
+      SecurityGroups: !Ref 'HttpInboundRule'
+
   HttpInboundRule:
     Type: 'AWS::EC2::SecurityGroupIngress'
     Properties:
       IpProtocol: tcp
       FromPort: '80'
       ToPort: '80'
-      SourceSecurityGroupId: !GetAtt 'LocalSecurityGroup.GroupId'
-      GroupId: !Ref 'MyInstanceSecurityGroup'
+      SourceSecurityGroupId: sg-7fa21309
+      GroupId: 'sg-7fa21309'

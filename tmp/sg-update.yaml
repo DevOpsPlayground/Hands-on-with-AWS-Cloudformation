@@ -1,0 +1,16 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Parameters:
+  SecurityGroupA:
+    Description: Security group to add Ingress rule to
+    Type: AWS::EC2::SecurityGroup::Id
+Resources:
+  LocalSecurityGroup:
+    Type: AWS::EC2::SecurityGroup
+  InboundRule:
+    Type: AWS::EC2::SecurityGroupIngress
+    Properties:
+      IpProtocol: tcp
+      FromPort: '80'
+      ToPort: '80'
+      SourceSecurityGroupId: !GetAtt 'LocalSecurityGroup.GroupId'
+      GroupId: !GetAtt 'SecurityGroupA.GroupId'
