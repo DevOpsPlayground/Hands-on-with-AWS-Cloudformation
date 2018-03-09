@@ -3,12 +3,14 @@ Description: 'AWS CloudFormation lab-004 EC2  - Update SecurityGroup '
 Parameters:
   MyInstanceSecurityGroup:
     Description: "Security groups that can be used to access the EC2 instances"
-    Type: "List<AWS::EC2::SecurityGroup::Id>"
+    Type: "AWS::EC2::SecurityGroup::Id"
     ConstraintDescription: must be list of EC2 security group ids
 
 Resources:
   LocalSecurityGroup:
     Type: AWS::EC2::SecurityGroup
+    Properties:
+      GroupDescription: Local Security Group
   HttpInboundRule:
     Type: 'AWS::EC2::SecurityGroupIngress'
     Properties:
