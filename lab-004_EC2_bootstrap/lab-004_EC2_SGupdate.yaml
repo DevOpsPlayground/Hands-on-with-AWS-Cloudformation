@@ -1,17 +1,25 @@
 AWSTemplateFormatVersion: '2010-09-09'
-Description: 'AWS CloudFormation lab-004 EC2  - Update SecurityGroup '
+Description: Update to WebSecurityGroup
 
 Resources:
-  EC2Instance:
-    Type: AWS::EC2::Instance
+  InstanceSecurityGroup:
+    Type: AWS::EC2::SecurityGroup
     Properties:
-      SecurityGroups: !Ref 'HttpInboundRule'
-
-  HttpInboundRule:
-    Type: 'AWS::EC2::SecurityGroupIngress'
-    Properties:
-      IpProtocol: tcp
-      FromPort: '80'
-      ToPort: '80'
-      SourceSecurityGroupId: sg-7fa21309
-      GroupId: 'sg-7fa21309'
+      GroupDescription: Web server
+      GroupId: 'sg-5d863c2b'
+      SecurityGroupIngress:
+        -
+          IpProtocol: tcp
+          FromPort: 80
+          ToPort: 80
+          CidrIp: 0.0.0.0/0
+        -
+          IpProtocol: tcp
+          FromPort: 443
+          ToPort: 443
+          CidrIp: 0.0.0.0/0
+        -
+          IpProtocol: tcp
+          FromPort: 22
+          ToPort: 22
+          CidrIp: 0.0.0.0/0

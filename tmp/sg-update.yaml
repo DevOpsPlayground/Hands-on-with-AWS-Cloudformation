@@ -12,5 +12,4 @@ Resources:
       IpProtocol: tcp
       FromPort: '80'
       ToPort: '80'
-      SourceSecurityGroupId: !GetAtt 'LocalSecurityGroup.GroupId'
-      GroupId: !GetAtt 'SecurityGroupA.GroupId'
+      GroupId: !Ref 'SecurityGroupA'
