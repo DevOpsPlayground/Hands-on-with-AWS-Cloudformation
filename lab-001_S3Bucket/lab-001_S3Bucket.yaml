@@ -18,8 +18,6 @@ Parameters:
     Description: Name of bucket, must be globally unique.
     Type: String
 
-
-
 Resources:
   usecaseBucket:
     Type: AWS::S3::Bucket
