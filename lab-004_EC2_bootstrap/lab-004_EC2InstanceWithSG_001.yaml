@@ -1,3 +1,5 @@
+# https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/sample-templates-services-us-west-2.html#w1ab2c21c45c15c15a
+# Template was modified from here
 AWSTemplateFormatVersion: '2010-09-09'
 Description: 'AWS CloudFormation lab-004 launch'
 Parameters:

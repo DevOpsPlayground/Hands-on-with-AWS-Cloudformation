@@ -1,0 +1,23 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: 'DevOps Playground Meetup Service Role setup.'
+
+
+Resources:
+  RootRole:
+    Type: "AWS::IAM::Role"
+    Properties:
+      AssumeRolePolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+          - Effect: "Allow"
+            Principal:
+              Service:
+                - "cloudformation.amazonaws.com"
+              AWS:
+                - !Sub "arn:aws:iam::${AWS::AccountId}:user/pg19meetupdemo"
+            Action:
+              - "sts:AssumeRole"
+      Path: "/"
+      RoleName: "pg19meetupLabsRoleDemo"
+      ManagedPolicyArns:
+      - arn:aws:iam::aws:policy/AdministratorAccess

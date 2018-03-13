@@ -1,0 +1,10 @@
+Description: "Create SSM Parameter"
+Resources:
+  BasicParameter:
+    Type: "AWS::SSM::Parameter"
+    Properties:
+      Name: "commands"
+      Type: "StringList"
+      Value: "date,ls"
+      Description: "SSM Parameter of type StringList."
+      AllowedPattern: "^[a-zA-Z]{1,10}$"
