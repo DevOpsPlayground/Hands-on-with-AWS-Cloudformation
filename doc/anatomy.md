@@ -25,7 +25,6 @@ Anatomy |
 
 
 
-
 #### YAML-formatted template fragment.
 ```
 ---

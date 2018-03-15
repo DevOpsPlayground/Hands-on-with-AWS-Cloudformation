@@ -1,11 +1,11 @@
 AWSTemplateFormatVersion: "2010-09-09"
-Description: Update to WebSecurityGroup
+Description: Application Security Group
 Resources:
-  WebSecurityGroup:
+  AppSecurityGroup:
     Type: AWS::EC2::SecurityGroup
     Properties:
-      GroupDescription: Web server
-      GroupName: web
+      GroupDescription: Application layer
+      GroupName: app
       SecurityGroupIngress:
         - IpProtocol: tcp
           FromPort: '80'

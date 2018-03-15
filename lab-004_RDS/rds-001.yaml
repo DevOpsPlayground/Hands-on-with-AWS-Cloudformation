@@ -30,7 +30,18 @@ Parameters:
     MaxLength: '41'
     AllowedPattern: '[a-zA-Z0-9]*'
     ConstraintDescription: must contain only alphanumeric characters.
+
 Resources:
+  DBEC2SecurityGroup:
+    Type: AWS::EC2::SecurityGroup
+    Properties:
+      GroupDescription: Open database for access
+      SecurityGroupIngress:
+      - IpProtocol: tcp
+        FromPort: '3306'
+        ToPort: '3306'
+        SourceSecurityGroupName: app
+
   MyDB:
     Type: AWS::RDS::DBInstance
     Properties:
@@ -42,6 +53,9 @@ Resources:
       MasterUsername: !Ref 'DBUser'
       MasterUserPassword: !Ref 'DBPassword'
       DBParameterGroupName: !Ref 'MyRDSParamGroup'
+      VPCSecurityGroups:
+        - !GetAtt DBEC2SecurityGroup.GroupId
+
   MyRDSParamGroup:
     Type: AWS::RDS::DBParameterGroup
     Properties:
@@ -51,6 +65,7 @@ Resources:
         autocommit: '1'
         general_log: '1'
         old_passwords: '0'
+
 Outputs:
   JDBCConnectionString:
     Description: JDBC connection string for the database

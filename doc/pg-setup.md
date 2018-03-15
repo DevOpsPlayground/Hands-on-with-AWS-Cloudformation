@@ -15,3 +15,7 @@
   - No Permissions
   1. Create group `meetups`
 1. Service Role `pg19meetupLabsRole`
+
+## EC2 Setup
+
+1. Generate EC2 Keypair `pg19meetup`

@@ -1,7 +1,7 @@
 # https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/sample-templates-services-us-west-2.html#w1ab2c21c45c15c15a
 # Template was modified from here
 AWSTemplateFormatVersion: '2010-09-09'
-Description: 'AWS CloudFormation lab-004 launch'
+Description: 'AWS CloudFormation lab-003 launch'
 Parameters:
   KeyName:
     Description: Name of an existing EC2 KeyPair to enable SSH access to the instance
@@ -84,7 +84,7 @@ Resources:
       InstanceType: !Ref 'InstanceType'
       SecurityGroups:
         - !Ref 'InstanceSecurityGroup'
-        - web
+        
       KeyName: !Ref 'KeyName'
       ImageId: !FindInMap
         - AWSRegionArch2AMI
