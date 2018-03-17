@@ -14,10 +14,10 @@ Resources:
               Service:
                 - "cloudformation.amazonaws.com"
               AWS:
-                - !Sub "arn:aws:iam::${AWS::AccountId}:user/pg19meetupdemo"
+                - !Sub "arn:aws:iam::${AWS::AccountId}:user/pg19meetup"
             Action:
               - "sts:AssumeRole"
       Path: "/"
-      RoleName: "pg19meetupLabsRoleDemo"
+      RoleName: "pg19meetupLabsRole"
       ManagedPolicyArns:
       - arn:aws:iam::aws:policy/AdministratorAccess

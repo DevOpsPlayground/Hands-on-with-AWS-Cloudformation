@@ -24,7 +24,6 @@ Parameters:
     ConstraintDescription: must contain only alphanumeric characters.
 
 
-
 Resources:
   meetupUser:
     Type: "AWS::IAM::User"
@@ -33,4 +32,4 @@ Resources:
         Password: !Ref "pUserPassword"
         PasswordResetRequired: "false"
       Path: "/"
-      UserName: "pg19meetupdemo"
+      UserName: "pg19meetup"

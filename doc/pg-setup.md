@@ -19,3 +19,14 @@
 ## EC2 Setup
 
 1. Generate EC2 Keypair `pg19meetup`
+
+## AWS CLI Setup
+
+Can can follow the labs using the AWS CLI for this you will need to install the CLI on to your system (see ref[1]).
+
+```
+pip install awscli --upgrade --user
+```
+
+## References
+1. AWS docs - [Install the AWS Command Line Interface on Linux](https://docs.aws.amazon.com/cli/latest/userguide/awscli-install-linux.html)

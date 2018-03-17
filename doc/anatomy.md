@@ -95,6 +95,13 @@ Outputs:
 
 ## Notes
 - When writing templates use YMAL its easier to read and work with.
+- __HEADERS__ - Description of what your stack does, contains, etc.
+- __PARAMETERES__ - Provision time values that add structured flexibility and customisation
+- __MAPPINGS__ - Pre-defined conditional case statements
+- __CONDITIONALS__ - Conditional values set via evaluations of passed References
+- __RESOURCES__ - AWS resource definitions
+- __OUTPUTS__ - Resulting attributes of stack resource creation
+
 
 ## Further Reading
 
