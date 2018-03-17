@@ -1,5 +1,6 @@
 https://www.meetup.com/DevOpsPlayground/events/248500144/
 
+
 Infrastructure as code (IaC) is the process of managing the provisioning of resources through machine readable definition files. AWS CloudFormation is Amazon's offering into this space.
 
 CloudFormation brings the ability to code your Infrastructure as a template, utilizing parameters and other features enabling the reuse of templates so provisioning of resources on your AWS estate, can be done in a repeatable and controlled manner.
