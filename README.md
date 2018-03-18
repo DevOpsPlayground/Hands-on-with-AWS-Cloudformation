@@ -29,10 +29,10 @@ What is cnf-init?
 # Labs
 
 - Lab-001 - Create a CloudFormation Stack
-- Lab-002 - Using Change Sets
-- Lab-003 - Understanding Metadata and Conditions
-- Lab-004 - launch an EC2 instance
-
+- Lab-002 - Updating Stacks
+- Lab-003 - Provisioning Resources with `cnf-init` and Userdata
+- Lab-004 - Provisioning Resources and managing secrets with Systems Manager - Parameter Store.
+- Lab-005 - Provisioning Resources with `cfn-init` helper scripts
 
 
 ## Further Reading
@@ -40,3 +40,5 @@ What is cnf-init?
 1. [AWS CloudFormation Designer](https://console.aws.amazon.com/cloudformation/designer/home?region=us-east-1) - Using `us-east-1` region
 1. Udemy - [AWS CloudFormation Master Class](https://www.udemy.com/aws-cloudformation-master-class/learn/v4/overview)
 1. acloud.guru - [Advanced AWS CloudFormation](https://acloud.guru/learn/aws-advanced-cloudformation)
+1. YouTube - [AWS re:Invent 2017: Deep Dive on AWS CloudFormation (DEV317)](https://www.youtube.com/watch?v=01hy48R9Kr8), 29 Nov 2017
+1. SlideShare - [DEV317_Deep Dive on AWS CloudFormation](https://www.slideshare.net/AmazonWebServices/dev317deep-dive-on-aws-cloudformation), By Anil Kumar (Senior Product Manager), Luis Colon (Senior Developer Advocate)

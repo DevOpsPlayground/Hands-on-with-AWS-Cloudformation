@@ -54,14 +54,12 @@ Resources:
         # Using the Conditional to set a variable in a specific way.
       AccessControl: BucketOwnerFullControl
       Tags:
-        -
-          Key: "environmentname"
+        - Key: "environmentname"
           Value: "development"
-        -
-          Key: "costcenter"
+        - Key: "costcenter"
           Value: "0123456789"
 
 Outputs:
-  usecaseBucket:
+  BucketName:
     Value: !Ref pS3BucketName
-    Description: Name of the Amazon S3 bucket for usecase - 002
+    Description: Name of the Amazon S3 bucket for Lab-001
