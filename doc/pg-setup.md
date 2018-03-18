@@ -18,7 +18,32 @@
 
 ## EC2 Setup
 
-1. Generate EC2 Keypair `pg19meetup`
+Generate EC2 Keypair `pg19meetup`
+
+```
+aws ec2 create-key-pair --key-name pg19-meetup
+```
+
+Setup iam user and role
+
+```
+aws cloudformation validate-template \
+--template-body file://iam-serverRole.yaml 
+
+aws cloudformation validate-template \
+--template-body file://iam-user.yaml 
+
+aws cloudformation create-stack \
+--stackname lab-001-<YOUR NAME> \
+--template-body file://iam-user.yaml \
+--parameters ParameterKey=pUserPassword,ParameterValue=<PASSWORD> \
+--region=us-east-1
+
+aws cloudformation create-stack \
+--stackname lab-001-<YOUR NAME> \
+--template-body file://iam-serverRole.yaml \
+--region=us-east-1
+```
 
 ## AWS CLI Setup
 

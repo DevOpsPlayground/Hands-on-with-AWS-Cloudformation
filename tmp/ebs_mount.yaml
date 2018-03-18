@@ -1,0 +1,15 @@
+MyEc2Instance:
+  Type: AWS::EC2::Instance
+  Properties:
+    KeyName: !Ref 'KeyName'
+MyVolume:
+  Type: AWS::EC2::Volume
+  Properties:
+    Size: '50'
+    AvailabilityZone: xyz
+attachment:
+  Type: AWS::EC2::VolumeAttachment
+  Properties:
+    InstanceId: !Ref 'MyEc2Instance'
+    VolumeId: !Ref 'MyVolume'
+    Device: /dev/sdh
