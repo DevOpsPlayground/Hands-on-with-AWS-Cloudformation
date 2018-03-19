@@ -1,5 +1,5 @@
 AWSTemplateFormatVersion: 2010-09-09
-Description: 
+Description: Lab-002 - Adding Rules to Security Groups 
 Resources:
   SGIngressHTTP:
     Type: 'AWS::EC2::SecurityGroupIngress'
