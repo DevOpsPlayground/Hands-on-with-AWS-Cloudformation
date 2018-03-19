@@ -1,0 +1,10 @@
+"SecurityGroupRedisIngress": {
+    "Type": "AWS::EC2::SecurityGroupIngress",
+    "Properties" : {   
+        "GroupId": "sg-123456789",
+        "IpProtocol": "tcp",
+        "FromPort": "6379",
+        "ToPort": "6379",
+        "CidrIp": "1.2.3.4/0"
+    }
+}

@@ -84,6 +84,7 @@ Resources:
       InstanceType: !Ref 'InstanceType'
       SecurityGroups:
         - !Ref 'InstanceSecurityGroup'
+        - app-<YOUR NAME>
         
       KeyName: !Ref 'KeyName'
       ImageId: !FindInMap
