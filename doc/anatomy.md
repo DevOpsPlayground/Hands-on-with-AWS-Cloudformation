@@ -13,15 +13,15 @@ Anatomy |
 ## Template Sections
 
 - `AWSTemplateFormatVersion`
-    - AWSTemplateFormatVersion: '2010-09-09' - date is the the cloudformation version that the template conforms to.
-- `Description` - Text string that describes the template and _must_
-- `Metadata` -
-- `Parameters` -
-- `Mappings` -
-- `Conditions` -
-- `Transforms` -
-- `Resources` -
-- `Output` -
+    - (Optional) AWSTemplateFormatVersion: '2010-09-09' - date is the the cloudformation version that the template conforms to.
+- `Description` - Text string that describes the template and _must_ if present come after `AWSTemplateFormatVersion`
+- `Metadata` - (Optional) provides additional information about the template. Can use to provide more meaning labels to Console.
+- `Parameters` - (Optional) Specifies values that you can pass in to your template at runtime (when you create or update a stack). You can refer to parameters in the Resources and Outputs sections of the template.
+- `Mappings` - (Optional) A mapping of keys and associated values that you can use to specify conditional parameter values, similar to a lookup table. You can match a key to a corresponding value by using the `Fn::FindInMap` intrinsic function in the Resources and Outputs section.
+- `Conditions` - (Optional) Defines conditions that control whether certain resources are created or whether certain resource properties are assigned a value during stack creation or update. 
+- `Transforms` - (Optional) For serverless applications (Lambda-based applications), specifies the version of the AWS Serverless Application Model (AWS SAM) to use. 
+- `Resources` - (Required) Specifies the stack resources and their properties, such as an EC2 instance or an S3 bucket. You can refer to resources in the `Resources` and `Outputs` sections of the template.
+- `Output` - Describes the values that are returned whenever you view your stack's properties.
 
 
 

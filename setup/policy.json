@@ -34,8 +34,8 @@
                 "rds:RestoreDBInstanceToPointInTime"
             ],
             "Resource": [
-                "arn:aws:rds:us-east-1:<ACCOUND-ID>:*",
-                "arn:aws:rds:eu-west-1:<ACCOUND-ID>:*"
+                "arn:aws:rds:us-east-1:415830525771:*",
+                "arn:aws:rds:eu-west-1:415830525771:*"
             ]
 	}, {
 		"Action": "vpc:*",
@@ -74,5 +74,5 @@
 			}
 		}
     } 
-	}]
+	]
 }
