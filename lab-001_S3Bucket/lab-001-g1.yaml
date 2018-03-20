@@ -16,6 +16,7 @@ Parameters:
   pS3BucketName:
     Description: Name of bucket, must be globally unique.
     Type: String
+    Default: pg19.<YOUR NAME>
 
 Resources:
   usecaseBucket:
