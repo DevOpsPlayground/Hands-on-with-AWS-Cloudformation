@@ -40,7 +40,7 @@ Resources:
       - IpProtocol: tcp
         FromPort: '3306'
         ToPort: '3306'
-        SourceSecurityGroupName: app-<YOUR NAME>
+        SourceSecurityGroupName: app-sunil
 
   MyDB:
     Type: AWS::RDS::DBInstance

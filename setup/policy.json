@@ -1,0 +1,78 @@
+{
+	"Version": "2012-10-17",
+	"Statement": [{
+		"Action": "ec2:*",
+		"Effect": "Allow",
+		"Resource": "*",
+		"Condition": {
+			"StringEquals": {
+				"ec2:Region": [
+					"us-east-1",
+					"eu-west-1"
+				]
+			}
+		}
+	}, {
+		"Action": "s3:*",
+		"Effect": "Allow",
+		"Resource": "*"
+	}, {
+		"Effect": "Allow",
+            	"Action": [
+                "rds:AddTagsToResource",
+                "rds:Create*",
+                "rds:Copy*",
+                "rds:DeleteDBInstance",
+                "rds:RebootDBInstance",
+                "rds:DownloadDBLogFilePortion",
+                "rds:ListTagsForResources",
+                "rds:ModifyDBInstance",
+                "rds:PromoteReadReplica",
+                "rds:RemoveTagsFromResource",
+                "rds:RestoreDBInstanceFromDBSnapshot",
+                "rds:DownloadDBLogFilePortion",
+                "rds:RestoreDBInstanceToPointInTime"
+            ],
+            "Resource": [
+                "arn:aws:rds:us-east-1:<ACCOUND-ID>:*",
+                "arn:aws:rds:eu-west-1:<ACCOUND-ID>:*"
+            ]
+	}, {
+		"Action": "vpc:*",
+		"Effect": "Allow",
+		"Resource": "*",
+		"Condition": {
+			"StringEquals": {
+				"ec2:Region": [
+					"us-east-1",
+					"eu-west-1"
+				]
+			}
+		}
+	}, {
+		"Action": "cloudformation:*",
+		"Effect": "Allow",
+		"Resource": "*",
+		"Condition": {
+			"StringEquals": {
+				"ec2:Region": [
+					"us-east-1",
+					"eu-west-1"
+				]
+			}
+		}
+	}, {
+		"Action": "rds:*",
+		"Effect": "Allow",
+		"Resource": "*",
+		"Condition": {
+			"StringEquals": {
+				"ec2:Region": [
+					"us-east-1",
+					"eu-west-1"
+				]
+			}
+		}
+    } 
+	}]
+}
