@@ -4,7 +4,7 @@ Resources:
   SGIngressHTTP:
     Type: 'AWS::EC2::SecurityGroupIngress'
     Properties:
-      GroupId: !Sub ${AWS::StackName}-app-sg
+      GroupId: <GROUP ID>
       IpProtocol: tcp
       FromPort: '80'
       ToPort: '80'
@@ -13,7 +13,7 @@ Resources:
   SGIngressHTTPS:
     Type: 'AWS::EC2::SecurityGroupIngress'
     Properties:
-      GroupId: !Sub ${AWS::StackName}-app-sg
+      GroupId: <GROUP ID>
       IpProtocol: tcp
       FromPort: '443'
       ToPort: '443'

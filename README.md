@@ -31,8 +31,6 @@ What is cnf-init?
 - Lab-001 - Create a CloudFormation Stack to Provision a S3 bucket Resource
 - Lab-002 - Updating Stacks with Security Groups
 - Lab-003 - Provisioning Resources with `cnf-init` and Userdata
-- Lab-004 - Provisioning Resources and managing secrets with Systems Manager - Parameter Store.
-- Lab-005 - Provisioning Resources with `cfn-init` helper scripts
 
 
 ## Further Reading
