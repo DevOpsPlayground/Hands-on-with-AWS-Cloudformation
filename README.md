@@ -1,14 +1,14 @@
 # Hands On Infrastructure as Code (IaC) with AWS Cloud Formation
 
 Home |
-[AWS Console](https://console.aws.amazon.com) |
+[AWS Console](https://goo.gl/c3q5bv) |
+[Switch Role](https://goo.gl/9ascNB) |
 [Anatomy](doc/anatomy.md) |
 [lab-001](doc/lab-001.md) |
 [lab-002](doc/lab-002.md) |
 [lab-003](doc/lab-003.md) |
 [lab-004](doc/lab-004.md) |
-[lab-005](doc/lab-005.md) |
-[lab-006](doc/lab-006.md)
+[lab-005](doc/lab-005.md) 
 
 
 DevOps Playground Meetup 19 - Introduction to CloudFromation
