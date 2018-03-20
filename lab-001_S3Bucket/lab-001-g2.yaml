@@ -1,5 +1,5 @@
 AWSTemplateFormatVersion: '2010-09-09'
-Description: Goal - Update S3 bucket add a policy document setting bucket to Public Read Access
+Description: Lab-001 - Create a CloudFormation Stack to Provision a S3 bucket Resource
 Metadata:
   AWS::CloudFormation::Interface:
     ParameterGroups:

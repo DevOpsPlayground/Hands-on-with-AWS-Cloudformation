@@ -1,5 +1,5 @@
 AWSTemplateFormatVersion: '2010-09-09'
-Description: Create a new S3 Bucket, with a parameterise bucketname with output bucketname
+Description: Lab-001 - Create a CloudFormation Stack to Provision a S3 bucket Resource
 Metadata:
   AWS::CloudFormation::Interface:
     ParameterGroups:
